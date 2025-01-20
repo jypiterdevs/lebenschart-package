@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+    <script src="https://cdn.jsdelivr.net/gh/jypiterdevs/lebenschart-package@latest/dist/lebenschart-package.umd.js"></script>
+</head>
+<body>
+    <div class="container mt-5" id="app">
+        <div class="row align-items-center">
+  
+          <div class="col-4">
+            <form chart-form="form" data-submit-action="true" action="http://localhost:5173/chart.html">
+              <div class="form-group mb-3" chart-form="input-wrapper">
+                <label class="form-label" for="name">Name:</label>
+                <input class="form-control" name="name" autocomplete="off" type="text" chart-form="name" placeholder="Namen auswählen"/>
+                <div class="input-error" chart-form="input-error"></div>
+              </div>
+              <div class="form-group mb-3" chart-form="input-wrapper">
+                <label class="form-label" for="day">Tag:</label>
+                <select class="form-control" name="day" id="day" chart-form="day" aria-placeholder="Tag auswählen"></select>
+                <div class="input-error" chart-form="input-error"></div>
+              </div>
+              <div class="form-group mb-3" chart-form="input-wrapper">
+                <label class="form-label" for="month">Monat:</label>
+                <select class="form-control" name="month" id="month" chart-form="month"></select>
+                <div class="input-error" chart-form="input-error"></div>
+              </div>
+              <div class="form-group mb-3" chart-form="input-wrapper">
+                <label class="form-label" for="year">Jahr:</label>
+                <select class="form-control" name="year" id="year" chart-form="year"></select>
+                <div class="input-error" chart-form="input-error"></div>
+              </div>
+              <div class="form-group mb-3" chart-form="input-wrapper">
+                <label class="form-label" for="time">Uhrzeit:</label>
+                <input class="form-control" name="time" autocomplete="off" type="text" chart-form="customTime" placeholder="Uhrzeit eingeben"/>
+                <div class="input-error" chart-form="input-error"></div>
+              </div>
+              <div class="form-group mb-3" chart-form="input-wrapper">
+                <label class="form-label" for="location">Ort:</label>
+                <input class="form-control" name="location" autocomplete="off" type="text" chart-form="location" placeholder="Ort eingeben"/>
+                <div class="input-error" chart-form="input-error"></div>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
